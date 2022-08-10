@@ -13,7 +13,8 @@ function generatePass() {
   hasPassword = true;
   passOneEl.textContent = "";
   passTwoEl.textContent = "";
-  
+  let firstPass = "";
+  let secondPass = "";
   //Let user choose password length between 0 and 15 characters.
   let passLength = document.getElementById("pass-length").value;
   if (passLength === "" || passLength > 15) {
@@ -22,11 +23,13 @@ function generatePass() {
 
   //generating password
   for (let i = 0; i < passLength; i++) {
-    let random1 = Math.floor(Math.random() * changingPass().length);
-    let random2 = Math.floor(Math.random() * changingPass().length);
-    passOneEl.textContent += changingPass()[random1];
-    passTwoEl.textContent += changingPass()[random2];
+      const random1 = Math.floor(Math.random() * changingPass().length);
+      const random2 = Math.floor(Math.random() * changingPass().length);
+      firstPass += changingPass()[random1];
+      secondPass += changingPass()[random2];
   }
+  passOneEl.textContent = firstPass;
+  passTwoEl.textContent = secondPass;
 }
 
 function copy(item) {
