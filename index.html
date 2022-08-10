@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <h1>Generate a <span>random password</span></h1>
+    <p>Never use an insecure password again.</p>
+    <div class="adjust-mobile">
+      <label for="pass-length" id="pass" class="password-length">PASSWORD LENGTH (max 15)</label>
+      <input class= type="number" id="pass-length" max="99" maxlength="2" value="15">
+    </div>
+    <div class="pass-container">
+      <button class="btn green" id="numbers" onclick="removingNumberOrSymbols(1)">Numbers Added</button>
+      <button class="btn green" id="symbols" onclick="removingNumberOrSymbols(2)">Symbols Added</button>  
+    </div>
+    <button class="btn green" onclick="generatePass()">Generate passwords</button>
+    <hr />
+    <div class="tooltip">
+      <span class="tooltiptext" id="myTooltip" ">Copy to clipboard</span>
+      <button onclick="copy(passOneEl)" id="generate-el-one" class="btn blue">
+      </button>
+    </div>
+    <div class="tooltip">
+      <span class="tooltiptext" id="myTooltip1" >Copy to clipboard</span>
+      <button onclick="copy(passTwoEl)"   id="generate-el-two" class="btn blue">
+      </button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
