@@ -57,7 +57,7 @@ p {
 .blue {
   background-color: var(--back-blue);
   min-width: 7.5rem;
-  height: 39px;
+  min-height: 39px;
   text-align: center;
   line-height: 1em;
   color: var(--color-white);
